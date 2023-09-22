@@ -10,6 +10,10 @@ while True:
     escolha = str(input('Você quer continuar? [S/N]')).strip().upper()[0]
     if escolha == 'N':
         break
+if 5 not in lista: #poderia ser if 5 in lista:
+    print('O valor 5 não foi encontrado na lista')
+else:
+    print('O valor 5 foi encontrado na lista')
 n = len(lista)
 lista.sort(reverse=True)
 print(f'foram digitados {n} números')
