@@ -12,8 +12,12 @@ elif 5 <= aluno['media'] < 7:
 else:
     aluno['situação'] = 'Reprovado'
 
-print(f'Aluno: {aluno["nome"]}')
-print(f'Média: {aluno["media"]}')
-print(f'A situação é igual a: {aluno["situação"]}')
-
+# Usando print com formatação
+#print(f'Aluno: {aluno["nome"]}')
+#print(f'Média: {aluno["media"]}')
+#print(f'A situação é igual a: {aluno["situação"]}')
+print('=-'*50)
+# Usando o for por enumerate, que nesse caso é da seguinte forma:
+for k, v in aluno.items():
+    print(f'{k} é igual a {v}')
 
