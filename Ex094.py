@@ -9,18 +9,20 @@ D) Uma lista de pessoas com idade acima da média'''
 mulheres = []
 media = []
 dados = dict()
-tot = 0
+tot = soma = 0
 while True:
     dados['Nome'] = str(input('Qual o seu nome? '))
     tot += 1
     dados['Sexo'] = str(input('Qual o seu sexo (M/F) ?')).strip().upper()[0]
     if dados["Sexo"] not in 'Mm':
         mulheres.append(dados["Nome"])
-    dados['Idade'] = int(input('Qual a sua idade? '))
+    idade = int(input('Qual a sua idade? '))
+    soma += idade
+
     resp = str(input('Você deseja continuar (S/N) ? ')).strip().upper()[0]
     if resp not in 'Ss':
         break
 print(f'Foram cadastradas {tot} pessoas')
+print(f'A média das idades cadastradas foram de {soma/tot}')
 print(f'A lista de mulheres cadastradas: {mulheres}')
-
 
